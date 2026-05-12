@@ -19,15 +19,26 @@ export function ProjectCard({
   liveUrl,
   githubUrl,
   index,
-}: ProjectCardProps) {
+}: Readonly<ProjectCardProps>) {
   const gradients = [
-    "from-violet-500 to-purple-600",
-    "from-pink-500 to-rose-600",
-    "from-blue-500 to-cyan-600",
-    "from-emerald-500 to-teal-600",
-    "from-orange-500 to-red-600",
-    "from-indigo-500 to-blue-600",
+    "from-sky-300 to-blue-400",
+    "from-blue-300 to-slate-400",
+    "from-slate-300 to-blue-500",
+    "from-sky-200 to-blue-300",
+    "from-stone-200 to-slate-300",
+    "from-blue-200 to-sky-300",
   ];
+
+  const getTechBadgeClass = (techIndex: number) => {
+    const styles = [
+      "bg-blue-100 text-blue-700 border-blue-200",
+      "bg-slate-100 text-slate-700 border-slate-200",
+      "bg-sky-100 text-sky-700 border-sky-200",
+      "bg-stone-100 text-stone-700 border-stone-200",
+    ];
+
+    return styles[techIndex % styles.length];
+  };
 
   return (
     <motion.div
@@ -35,7 +46,7 @@ export function ProjectCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group relative bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20"
+      className="group relative bg-card rounded-xl overflow-hidden border border-border hover:border-blue-300/60 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-200/40"
     >
       <div className="relative h-48 overflow-hidden bg-muted">
         <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index % gradients.length]} opacity-20`} />
@@ -60,12 +71,7 @@ export function ProjectCard({
           {technologies.map((tech, i) => (
             <span
               key={tech}
-              className={`px-3 py-1 rounded-full text-sm text-white ${
-                i % 4 === 0 ? "bg-violet-500" :
-                i % 4 === 1 ? "bg-pink-500" :
-                i % 4 === 2 ? "bg-cyan-500" :
-                "bg-emerald-500"
-              }`}
+              className={`px-3 py-1 rounded-full text-sm border ${getTechBadgeClass(i)}`}
             >
               {tech}
             </span>

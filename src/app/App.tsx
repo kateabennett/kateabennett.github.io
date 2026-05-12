@@ -76,9 +76,9 @@ export default function App() {
       <section className="relative pt-32 pb-20 px-6 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-violet-500/20 to-purple-600/20 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-br from-pink-500/20 to-rose-600/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
+          <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-sky-200/40 to-blue-300/30 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-br from-slate-200/35 to-blue-100/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-blue-100/30 to-slate-200/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
         </div>
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
@@ -91,7 +91,7 @@ export default function App() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-violet-500 to-purple-600 text-white rounded-full mb-6 shadow-lg shadow-violet-500/50"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-sky-500 to-blue-600 text-white rounded-full mb-6 shadow-lg shadow-blue-400/40"
               >
                 <Zap className="w-4 h-4" />
                 <span className="text-sm">Available for new projects</span>
@@ -108,7 +108,7 @@ export default function App() {
                   href="#projects"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-violet-500 to-purple-600 text-white rounded-lg shadow-lg shadow-violet-500/50 hover:shadow-xl hover:shadow-violet-500/60 transition-all duration-200"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-sky-500 to-blue-600 text-white rounded-lg shadow-lg shadow-blue-400/40 hover:shadow-xl hover:shadow-blue-400/50 transition-all duration-200"
                 >
                   View My Work
                   <ArrowRight className="w-4 h-4" />
@@ -117,7 +117,7 @@ export default function App() {
                   href="#contact"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center gap-2 px-6 py-3 border-2 border-violet-500 text-violet-600 rounded-lg hover:bg-violet-50 transition-colors duration-200"
+                  className="inline-flex items-center gap-2 px-6 py-3 border-2 border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors duration-200"
                 >
                   Get In Touch
                 </motion.a>
@@ -128,9 +128,9 @@ export default function App() {
           {/* Feature Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20">
             {[
-              { icon: Code2, title: "Clean Code", desc: "Well-structured, maintainable, and scalable solutions", gradient: "from-violet-500 to-purple-600" },
-              { icon: Palette, title: "Modern Design", desc: "Beautiful interfaces that follow best UX practices", gradient: "from-pink-500 to-rose-600" },
-              { icon: Zap, title: "Performance", desc: "Optimized applications for lightning-fast experiences", gradient: "from-cyan-500 to-blue-600" },
+              { icon: Code2, title: "Clean Code", desc: "Well-structured, maintainable, and scalable solutions", gradient: "from-sky-400 to-blue-500" },
+              { icon: Palette, title: "Modern Design", desc: "Beautiful interfaces that follow best UX practices", gradient: "from-blue-300 to-slate-400" },
+              { icon: Zap, title: "Performance", desc: "Optimized applications for lightning-fast experiences", gradient: "from-slate-400 to-blue-500" },
             ].map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -154,7 +154,7 @@ export default function App() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="relative py-20 px-6 bg-gradient-to-b from-violet-50/50 to-white">
+      <section id="projects" className="relative py-20 px-6 bg-gradient-to-b from-blue-50/60 via-amber-50/30 to-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -203,9 +203,9 @@ export default function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="relative py-20 px-6 bg-gradient-to-b from-white to-violet-50/50 overflow-hidden">
-        <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-pink-500/20 to-rose-600/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-10 w-72 h-72 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-full blur-3xl" />
+      <section id="contact" className="relative py-20 px-6 bg-gradient-to-b from-white via-amber-50/30 to-blue-50/50 overflow-hidden">
+        <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-blue-200/30 to-slate-200/30 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-10 w-72 h-72 bg-gradient-to-br from-sky-200/30 to-blue-200/30 rounded-full blur-3xl" />
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -247,9 +247,9 @@ export default function App() {
 
               <div className="space-y-4">
                 {[
-                  { icon: Mail, label: "Email", value: "hello@example.com", href: "mailto:hello@example.com", gradient: "from-violet-500 to-purple-600" },
-                  { icon: Github, label: "GitHub", value: "github.com/yourusername", href: "#", gradient: "from-pink-500 to-rose-600" },
-                  { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/yourprofile", href: "#", gradient: "from-cyan-500 to-blue-600" },
+                  { icon: Mail, label: "Email", value: "hello@example.com", href: "mailto:hello@example.com", gradient: "from-sky-500 to-blue-600" },
+                  { icon: Github, label: "GitHub", value: "github.com/yourusername", href: "#", gradient: "from-blue-400 to-slate-500" },
+                  { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/yourprofile", href: "#", gradient: "from-slate-400 to-blue-500" },
                 ].map((contact) => (
                   <motion.a
                     key={contact.label}
