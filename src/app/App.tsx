@@ -30,30 +30,6 @@ export default function App() {
       liveUrl: "#",
       githubUrl: "#",
     },
-    {
-      title: "Real Estate Marketplace",
-      description: "Property listing platform with advanced search filters, virtual tours, and integrated mortgage calculator.",
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
-      technologies: ["Vue.js", "Laravel", "MySQL", "AWS"],
-      liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      title: "Fitness Tracking App",
-      description: "Mobile-responsive fitness application with workout tracking, nutrition planning, and progress visualization.",
-      image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop",
-      technologies: ["React Native", "Redux", "Node.js", "MongoDB"],
-      liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      title: "Learning Management System",
-      description: "Educational platform with course creation, video streaming, quizzes, and student progress tracking.",
-      image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop",
-      technologies: ["Angular", "NestJS", "GraphQL", "PostgreSQL"],
-      liveUrl: "#",
-      githubUrl: "#",
-    },
   ];
 
   const skills = [
